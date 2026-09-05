@@ -3,7 +3,7 @@ Contribution [#1]: [UI: add a svg icon for the crash cymbal]
 Contribution Number: [1]
 Student: Iyanuoluwa Hephzibah Olanipekun
 Issue: [https://github.com/Babali42/DrumBeatRepo/issues/511]
-Status: [Phase I] [Complete]
+Status: [Phase II] [In Progress]
 
 Why I Chose This Issue
 [This issue interests me because it is a mix of creativity and coding. I love that it matches my skills as it requires yet puts me out of my comfort zone as it's not in python language. It is on an easier level so I will focus more on learning the proper procedure of Open-source contribution]
@@ -30,119 +30,97 @@ Environment Setup
 [There was no challenge in setting up your local development environment. However, I was challenged in knowing exactly files tto change, since they was a lot of files in codebase. This was solved when the instructor (Daniel) gave shorthands to type in url to filter through. Kind of like 'Ctrl + F']
 
 ### Steps to Reproduce
+Steps to Reproduce
+[Step 1 - Run the application locally.
+Step 2 - Open the Rock Variation Pattern.
+Step 3 - Locate the note using MIDI value 49.
+Step 4 - Observe that no crash cymbal icon is rendered.
+Step 5 - Compare with other drum instruments that do display.]
+[Observed result]
+Reproduction Evidence
+Commit showing reproduction: [https://github.com/hephz-pekun/AI3-Drumbeat-P1/commits/main/README.md]
+Screenshots/logs: [If applicable]
+My findings: [I discovered that the issue is not related to MIDI configuration. After reviewing the issue description, MIDI note 49 is already configured correctly. The root cause appears to be that the frontend UI lacks a dedicated SVG image for the crash cymbal, or the icon is not mapped correctly within the drum image pipe. The provided issue specifically points to adding a crash cymbal SVG from the SVG Repo drum assets and updating the image mapping/tests.]
+Solution Approach
+Analysis
+[Your analysis of the root cause is that The UI relies on SVG assets and instrument-to-image mappings. While MIDI note 49 is recognized correctly, the crash cymbal has no associated SVG icon available to the frontend, causing a fallback or missing-image state. cd4]
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+Proposed Solution
+[Here's my proposed solution:
+Locate the existing drum SVG assets.
+Download or create an appropriate crash cymbal SVG icon.
+Add the SVG to the project's asset directory.
+Update the drum image mapping so MIDI note 49 resolves to the new crash cymbal icon.
+Update the relevant test in:
+src/app/ui/pipes/drum-image.pipe.spec.ts
+Verify the icon appears correctly in the Rock Variation Pattern UI.]
 
-### Reproduction Evidence
-
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
-
----
-
-## Solution Approach
-
-### Analysis
-
-[Your analysis of the root cause - what's causing the issue?]
-
-### Proposed Solution
-
-[High-level description of your fix approach]
-
-### Implementation Plan
-
+Implementation Plan
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+Understand: [The crash cymbal (MIDI note 49) functions correctly but lacks a corresponding SVG icon in the UI, resulting in a missing instrument image.]
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+Match: [Other drum instruments already have SVG assets and mapping logic. The crash cymbal should follow the same pattern as the existing drum icons]
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+Plan: [Step-by-step implementation plan] 
+1. [Find where drum SVG assets are stored.]
+2. [Add a crash cymbal SVG asset.]
+3. [Update drum-image mapping logic.]
+4. [Update/add unit tests for MIDI note 49.]
+5. [Run tests and manually verify the UI.]
 
-**Implement:** [Link to your branch/commits as you work]
+Implement: [https://github.com/hephz-pekun/AI3-Drumbeat-P1/commits/main/README.md]
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+Review: [Self-review checklist - does it follow the project's contribution guidelines?]
 
-**Evaluate:** [How will you verify it works?]
+Evaluate: [I will verify by checking that:
+Crash cymbal icon displays correctly.
+Existing tests continue to pass.
+New crash cymbal test passes.
+Rock Variation Pattern shows the correct instrument image.]
 
----
-
-## Testing Strategy
-
-### Unit Tests
-
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
-
-### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
-
-### Manual Testing
-
+Testing Strategy
+Unit Tests
+[ ] Test case 1: [Description]
+[ ] Test case 2: [Description]
+[ ] Test case 3: [Description]
+Integration Tests
+[ ] Integration scenario 1
+[ ] Integration scenario 2
+Manual Testing
 [What you tested manually and results]
 
----
+Implementation Notes
+Week [O] Progress
+[Nothinging built, just selected the preferred issue to contribute to]
 
-## Implementation Notes
-
-### Week [X] Progress
-
-[What you built this week, challenges faced, decisions made]
-
-### Week [Y] Progress
-
+Week [Y] Progress
 [Continue documenting as you work]
 
-### Code Changes
+Code Changes
+Files modified: [None yet]
+Key commits: [Links to important commits]
+Approach decisions: [Why you chose certain approaches]
+Pull Request
+PR Link: [GitHub PR URL when submitted]
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+PR Description: [Draft or final PR description - much of the content above can be adapted]
 
----
+Maintainer Feedback: - [Date]: [Summary of feedback received] - [Date]: [How you addressed it]
 
-## Pull Request
+Status: [Awaiting review / Iterating / Approved / Merged]
 
-**PR Link:** [GitHub PR URL when submitted]
-
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
-
-**Maintainer Feedback:**
-- [Date]: [Summary of feedback received]
-- [Date]: [How you addressed it]
-
-**Status:** [Awaiting review / Iterating / Approved / Merged]
-
----
-
-## Learnings & Reflections
-
-### Technical Skills Gained
-
+Learnings & Reflections
+Technical Skills Gained
 [What you learned technically]
 
-### Challenges Overcome
-
+Challenges Overcome
 [What was hard and how you solved it]
 
-### What I'd Do Differently Next Time
-
+What I'd Do Differently Next Time
 [Reflection on your process]
 
----
-
-## Resources Used
-
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
+Resources Used
+[Link to helpful documentation]
+[Tutorial or Stack Overflow post that helped]
+[GitHub issues or discussions that helped]
