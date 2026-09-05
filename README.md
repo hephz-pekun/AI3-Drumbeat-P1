@@ -1,5 +1,5 @@
 # AI3-Drumbeat-P1
-Contribution [#]: [UI: add a svg icon for the crash cymbal]
+Contribution [#1]: [UI: add a svg icon for the crash cymbal]
 Contribution Number: [1]
 Student: Iyanuoluwa Hephzibah Olanipekun
 Issue: [https://github.com/Babali42/DrumBeatRepo/issues/511]
@@ -37,7 +37,7 @@ Step 4 - Observe that no crash cymbal icon is rendered.
 Step 5 - Compare with other drum instruments that do display.]
 [Observed result]
 Reproduction Evidence
-Commit showing reproduction: [Link to commit in your fork]
+Commit showing reproduction: [https://github.com/hephz-pekun/AI3-Drumbeat-P1/commits/main/README.md]
 Screenshots/logs: [If applicable]
 My findings: [I discovered that the issue is not related to MIDI configuration. After reviewing the issue description, MIDI note 49 is already configured correctly. The root cause appears to be that the frontend UI lacks a dedicated SVG image for the crash cymbal, or the icon is not mapped correctly within the drum image pipe. The provided issue specifically points to adding a crash cymbal SVG from the SVG Repo drum assets and updating the image mapping/tests.]
 Solution Approach
@@ -68,7 +68,7 @@ Plan: [Step-by-step implementation plan]
 4. [Update/add unit tests for MIDI note 49.]
 5. [Run tests and manually verify the UI.]
 
-Implement: [Link to your branch/commits as you work]
+Implement: [https://github.com/hephz-pekun/AI3-Drumbeat-P1/commits/main/README.md]
 
 Review: [Self-review checklist - does it follow the project's contribution guidelines?]
 
@@ -97,7 +97,7 @@ Week [Y] Progress
 [Continue documenting as you work]
 
 Code Changes
-Files modified: [- Contribution README]
+Files modified: [None yet]
 Key commits: [Links to important commits]
 Approach decisions: [Why you chose certain approaches]
 Pull Request
