@@ -3,7 +3,7 @@ Contribution [#1]: [UI: add a svg icon for the crash cymbal]
 Contribution Number: [1]
 Student: Iyanuoluwa Hephzibah Olanipekun
 Issue: [https://github.com/Babali42/DrumBeatRepo/issues/511]
-Status: [Phase II] [In Progress]
+Status: [Phase II] [Complete]
 
 Why I Chose This Issue
 [This issue interests me because it is a mix of creativity and coding. I love that it matches my skills as it requires yet puts me out of my comfort zone as it's not in python language. It is on an easier level so I will focus more on learning the proper procedure of Open-source contribution]
@@ -40,7 +40,7 @@ Step 5 - Compare with other drum instruments that do display.]
 Reproduction Evidence
 Commit showing reproduction: [https://github.com/hephz-pekun/AI3-Drumbeat-P1/commits/main/README.md]
 Screenshots/logs: [If applicable]
-My findings: [I discovered that the issue is not related to MIDI configuration. After reviewing the issue description, MIDI note 49 is already configured correctly. The root cause appears to be that the frontend UI lacks a dedicated SVG image for the crash cymbal, or the icon is not mapped correctly within the drum image pipe. The provided issue specifically points to adding a crash cymbal SVG from the SVG Repo drum assets and updating the image mapping/tests.]
+My findings: [I discovered that the issue is not related to MIDI configuration. After reviewing the issue description, MIDI note 49 is already configured correctly. The root cause appears to be that the frontend UI lacks a dedicated SVG image for the crash cymbal, and the icon is not mapped correctly within the drum image pipe. The provided issue specifically points to adding a crash cymbal SVG from the SVG Repo drum assets and updating the image mapping/tests.]
 Solution Approach
 Analysis
 [Your analysis of the root cause is that The UI relies on SVG assets and instrument-to-image mappings. While MIDI note 49 is recognized correctly, the crash cymbal has no associated SVG icon available to the frontend, causing a fallback or missing-image state. cd4]
@@ -69,7 +69,7 @@ Plan: [Step-by-step implementation plan]
 4. [Update/add unit tests for MIDI note 49.]
 5. [Run tests and manually verify the UI.]
 
-Implement: [https://github.com/hephz-pekun/AI3-Drumbeat-P1/commits/main/README.md]
+Implement: [https://github.com/shanker-codepath/DrumBeatRepo/tree/cymbal-image]
 
 Review: [Self-review checklist - does it follow the project's contribution guidelines?]
 
@@ -81,25 +81,27 @@ Rock Variation Pattern shows the correct instrument image.]
 
 Testing Strategy
 Unit Tests
-[ ] Test case 1: [Description]
-[ ] Test case 2: [Description]
-[ ] Test case 3: [Description]
+No unit test written
 Integration Tests
-[ ] Integration scenario 1
-[ ] Integration scenario 2
+No integration test written
 Manual Testing
-[What you tested manually and results]
+[Checked that the beat still plays,
+Tested that the symbol shows when Rock variation is selected,
+Ran entire program and test command given in instructions to make sure nothing else was affected]
 
 Implementation Notes
 Week [O] Progress
 [Nothinging built, just selected the preferred issue to contribute to]
 
-Week [Y] Progress
-[Continue documenting as you work]
+Week [1] Progress
+[Deconstructed issue, made a plan of action and found files related to or needed for solution]
 
 Code Changes
-Files modified: [None yet]
-Key commits: [Links to important commits]
+Files modified: [frontend/src/app/ui/pipes/drum-image.pipe.spec.ts
+frontend/src/app/ui/pipes/drum-image.pipe.ts
+frontend/src/assets/images/drums/crash-dark.svg
+frontend/src/assets/images/drums/crash-light.svg]
+Key commits: [https://github.com/Babali42/DrumBeatRepo/compare/main...shanker-codepath:DrumBeatRepo:cymbal-image]
 Approach decisions: [Why you chose certain approaches]
 Pull Request
 PR Link: [GitHub PR URL when submitted]
