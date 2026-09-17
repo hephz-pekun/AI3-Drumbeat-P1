@@ -3,7 +3,7 @@ Contribution [#1]: [UI: add a svg icon for the crash cymbal]
 Contribution Number: [1]
 Student: Iyanuoluwa Hephzibah Olanipekun
 Issue: [https://github.com/Babali42/DrumBeatRepo/issues/511]
-Status: [Phase II] [Complete]
+Status: [Phase III] [Complete]
 
 Why I Chose This Issue
 [This issue interests me because it is a mix of creativity and coding. I love that it matches my skills as it requires yet puts me out of my comfort zone as it's not in python language. It is on an easier level so I will focus more on learning the proper procedure of Open-source contribution]
@@ -96,33 +96,36 @@ Week [O] Progress
 Week [1] Progress
 [Deconstructed issue, made a plan of action and found files related to or needed for solution]
 
+Week [2] Progress
+[Implemented plan in codebase, derived open licensed image and inserted it]
+
 Code Changes
 Files modified: [frontend/src/app/ui/pipes/drum-image.pipe.spec.ts
 frontend/src/app/ui/pipes/drum-image.pipe.ts
 frontend/src/assets/images/drums/crash-dark.svg
 frontend/src/assets/images/drums/crash-light.svg]
 Key commits: [https://github.com/Babali42/DrumBeatRepo/compare/main...shanker-codepath:DrumBeatRepo:cymbal-image]
-Approach decisions: [Why you chose certain approaches]
+Approach decisions: [Use open license image was ethically right and changes made to the code was the most direct and effective way to make the change]
 Pull Request
 PR Link: [GitHub PR URL when submitted]
 
-PR Description: [Draft or final PR description - much of the content above can be adapted]
+PR Description: [Added crash cymbal image
+This includes both a light and a dark version, determined by the SVG fill color. Maps to crash notes 49 and 57, so if any others are used, we'd need to add them to drum-image.pipe.ts.]
 
-Maintainer Feedback: - [Date]: [Summary of feedback received] - [Date]: [How you addressed it]
+Maintainer Feedback: - [No maintainer feedback]
 
-Status: [Awaiting review / Iterating / Approved / Merged]
+Status: [Approved]
 
 Learnings & Reflections
 Technical Skills Gained
-[What you learned technically]
+[I learnt to use svg website to obtain open licensed images and asserting link to code file]
 
 Challenges Overcome
-[What was hard and how you solved it]
+[The hardest/time consuming part was the onboarding. Got tripped out with the installations and commands to be ran. Troubleshot with Claude and fixed]
 
 What I'd Do Differently Next Time
-[Reflection on your process]
+[Next time, I'd analyze the setup instruction more carefully, walk through it more critically, and be more patient]
 
 Resources Used
-[Link to helpful documentation]
+[(https://www.svgrepo.com/)]
 [Tutorial or Stack Overflow post that helped]
-[GitHub issues or discussions that helped]
